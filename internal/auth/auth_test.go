@@ -23,7 +23,7 @@ func TestGetAPIKey(t *testing.T) {
 			name:        "No Authorization Header",
 			headers:     http.Header{},
 			expectedKey: "",
-			expectedErr: nil,
+			expectedErr: ErrNoAuthHeaderIncluded,
 		},
 		{
 			name:        "Malformed Authorization Header",
